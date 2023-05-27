@@ -1,2 +1,2 @@
-# facial-landmark-detetion-220
+# facial-landmark-detetion-222
 > a pytorch implementaion of facial landmark detection based on PUPNET, supporting 222 points and multiple face conditions.

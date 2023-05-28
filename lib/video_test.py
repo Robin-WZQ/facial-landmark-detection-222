@@ -136,7 +136,7 @@ class OneEuroFilter:
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Testing_images configurations')
-    parser.add_argument("--video_path",default="./test.mp4", type=str)
+    parser.add_argument("--video_path",default="./002.avi", type=str)
     parser.add_argument("--num_nb",default=20, type=str)
     parser.add_argument("--width_mult",default=0.35, type=str)
     parser.add_argument("--num_lms",default=222, type=str)
@@ -189,59 +189,56 @@ if __name__ == "__main__":
         
         success, frame = videoCapture.read()
         if(i % 1 == 0 and success == True):
-            try:
-                print("writing video: %.2f%%" % (float(100 * i / frames)))
-                detections, _ = detector.detect(frame, my_thresh, 1) 
+            print("writing video: %.2f%%" % (float(100 * i / frames)))
+            detections, _ = detector.detect(frame, my_thresh, 1) 
 
-                if len(detections) != 0:
+            if len(detections) != 0:
 
-                    det_xmin = detections[0][2]
-                    det_ymin = detections[0][3]
-                    det_width = detections[0][4]
-                    det_height = detections[0][5]
-                    det_xmax = det_xmin + det_width - 1
-                    det_ymax = det_ymin + det_height - 1
+                det_xmin = detections[0][2]
+                det_ymin = detections[0][3]
+                det_width = detections[0][4]
+                det_height = detections[0][5]
+                det_xmax = det_xmin + det_width - 1
+                det_ymax = det_ymin + det_height - 1
 
-                    det_xmin -= int(det_width * (det_box_scale-1)/2)
-                    det_ymin += int(det_height * (det_box_scale-1)/2)
-                    det_xmax += int(det_width * (det_box_scale-1)/2)
-                    det_ymax += int(det_height * (det_box_scale-1)/2)
-                    det_xmin = max(det_xmin, 0)
-                    det_ymin = max(det_ymin, 0)
-                    det_xmax = min(det_xmax, width-1)
-                    det_ymax = min(det_ymax, height-1)
-                    det_width = det_xmax - det_xmin + 1
-                    det_height = det_ymax - det_ymin + 1
-                    face = frame[det_ymin:det_ymax, det_xmin:det_xmax, :]
-                    cv2.rectangle(frame, (det_xmin, det_ymin), (det_xmax, det_ymax), (0, 0, 255), 2)
+                det_xmin -= int(det_width * (det_box_scale-1)/2)
+                det_ymin += int(det_height * (det_box_scale-1)/2)
+                det_xmax += int(det_width * (det_box_scale-1)/2)
+                det_ymax += int(det_height * (det_box_scale-1)/2)
+                det_xmin = max(det_xmin, 0)
+                det_ymin = max(det_ymin, 0)
+                det_xmax = min(det_xmax, width-1)
+                det_ymax = min(det_ymax, height-1)
+                det_width = det_xmax - det_xmin + 1
+                det_height = det_ymax - det_ymin + 1
+                face = frame[det_ymin:det_ymax, det_xmin:det_xmax, :]
+                cv2.rectangle(frame, (det_xmin, det_ymin), (det_xmax, det_ymax), (0, 0, 255), 2)
 
-                    if cnt == 0:
-                        landmark_pred = demo_image_mbnet(face,landmark_5,model_process_in,preprocess,input_size=args.input_size,device=device,num_lms=args.num_lms)
-                        landmark_pred = np.array(landmark_pred).reshape(-1,2)
+                if cnt == 0:
+                    landmark_pred = demo_image_mbnet(face,landmark_5,model_process_in,preprocess,input_size=args.input_size,device=device,num_lms=args.num_lms)
+                    landmark_pred = np.array(landmark_pred).reshape(-1,2)
 
-                        for j in range(0,args.num_lms):
-                            landmark_pred[j,0] = landmark_pred[j,0] * det_width + det_xmin
-                            landmark_pred[j,1] = landmark_pred[j,1] * det_height + det_ymin
-                            cv2.circle(frame,(int(landmark_pred[j,0]),int(landmark_pred[j,1])),1,(0,0,255),-1)
+                    for j in range(0,args.num_lms):
+                        landmark_pred[j,0] = landmark_pred[j,0] * det_width + det_xmin
+                        landmark_pred[j,1] = landmark_pred[j,1] * det_height + det_ymin
+                        cv2.circle(frame,(int(landmark_pred[j,0]),int(landmark_pred[j,1])),1,(0,0,255),-1)
 
-                        new_landmark_5 = landmark_pred[[104,105,46,84,90]]
-                    else:
-                        p_filter = OneEuroFilter(0,landmark_pred,dx0=0.0,min_cutoff= 0.001,beta=0.7,d_cutoff=1.0)
-                        landmark_pred = demo_image_mbnet(frame,new_landmark_5,model_process_in,preprocess,input_size=args.input_size,device=device,num_lms=args.num_lms)
-                        landmark_pred = np.array(landmark_pred).reshape(-1,2)
-                        new_landmark_5 = landmark_pred[[104,105,46,84,90]]
+                    new_landmark_5 = landmark_pred[[118,138,36,218,219]]
+                else:
+                    p_filter = OneEuroFilter(0,landmark_pred,dx0=0.0,min_cutoff= 0.001,beta=0.7,d_cutoff=1.0)
+                    landmark_pred = demo_image_mbnet(frame,new_landmark_5,model_process_in,preprocess,input_size=args.input_size,device=device,num_lms=args.num_lms)
+                    landmark_pred = np.array(landmark_pred).reshape(-1,2)
+                    new_landmark_5 = landmark_pred[[118,138,36,218,219]]
 
-                        filtered = p_filter(cnt,landmark_pred)
-                        landmark_pred = filtered 
-                    
-                        for j in range(0,args.num_lms):
-                            x_pred = landmark_pred[j,0]
-                            y_pred = landmark_pred[j,1]
-                            cv2.circle(frame,(int(x_pred),int(y_pred)),3,(0,0,255),-1)
+                    filtered = p_filter(cnt,landmark_pred)
+                    landmark_pred = filtered 
+                
+                    for j in range(0,args.num_lms):
+                        x_pred = landmark_pred[j,0]
+                        y_pred = landmark_pred[j,1]
+                        cv2.circle(frame,(int(x_pred),int(y_pred)),3,(0,0,255),-1)
 
-                    videowriter.write(frame.astype(np.uint8))
-            except:
-                pass
+                videowriter.write(frame.astype(np.uint8))
             cnt+=1
 
     videoCapture.release()

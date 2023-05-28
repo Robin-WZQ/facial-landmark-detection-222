@@ -36,6 +36,7 @@
         </div>  
 
 - Videos
+    ![video1](https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/83eeb0aa-cb9d-4fdf-b8fd-6dd88eb1142b)
 
 ### Installation
 The code was tested with Anaconda, Python 3.7. After installing the Anaconda environment:

@@ -27,7 +27,12 @@
   
     - <details><summary> 🔭 Large pose </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/cccee92f-a671-45fd-ad88-d6ed1136df10 width="380" height="190"/>
+        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/1e77f049-798c-45b3-8d79-949416016f80 width="380" height="380"/>
+        </div>  
+    
+    - <details><summary> 😃 extreme expression </summary><p><div align="center">
+        <div align=center>
+        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/dce78eb0-09d6-4b2a-b458-3543c22c416f width="570" height="380"/>
         </div>  
 
 - Videos

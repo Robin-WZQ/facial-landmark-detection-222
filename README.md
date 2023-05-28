@@ -1,4 +1,4 @@
-# facial-landmark-detection-222
+# Facial Landmark Detection 👀🔍
 > a pytorch inference code of facial landmark detection based on [PIPNET](https://github.com/jhb86253817/PIPNet), supporting 222 points and multiple face conditions.
 
 ### Key points

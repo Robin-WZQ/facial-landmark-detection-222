@@ -26,7 +26,6 @@ from FaceBoxesV2.faceboxes_detector import *
 warnings.filterwarnings('ignore')
 
 def get_meanface(meanface_file, num_nb, scale=1.0):
-    '''计算平均人脸相关指标'''
     with open(meanface_file, 'r', encoding='utf-8') as f:
         meanface = f.readlines()[0]
 
@@ -139,7 +138,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Testing_images configurations')
     parser.add_argument("--video_path",default="./test.mp4", type=str)
     parser.add_argument("--num_nb",default=20, type=str)
-    parser.add_argument("--width_mult",default=0.25, type=str)
+    parser.add_argument("--width_mult",default=0.35, type=str)
     parser.add_argument("--num_lms",default=222, type=str)
     parser.add_argument("--input_size",default=192, type=str)
     parser.add_argument("--net_stride",default=32, type=str)

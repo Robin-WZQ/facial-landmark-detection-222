@@ -169,33 +169,3 @@ def getTform_scale(landmark, target_size, warp_type = "DL_LANDMARK", scale=1):
     tform[1][2] = d
 
     return tform
-
-if __name__ == "__main__":
-    img = cv2.imread("test.jpg")
-    landmark = [468, 216, 548, 204, 512, 267, 492, 306, 543, 299]
-
-    # size_save = 512
-    # tform_save = getTform(landmark, size_save, warp_type="DL_SAVE")
-    # img_warped_for_training = cv2.warpAffine(img, tform_save, (size_save, size_save))
-    # cv2.imwrite("img_save.jpg", img_warped_for_training)
-
-    size_model = 256 
-    tform_landmark = getTform(landmark, size_model, warp_type="DL_LANDMARK") ###本实验常用template
-    img_warped_for_model = cv2.warpAffine(img, tform_landmark, (size_model, size_model))
-    cv2.imwrite("img_model.jpg", img_warped_for_model)
-    
-    ###由于非template扰动，而是直接对图像进行扰动，为避免rotate出现黑框，需扩大crop_size，原256扩大至384###
-    size_model = 256
-    scale = 1.5
-    tform_landmark = getTform_scale(landmark, size_model, warp_type="DL_LANDMARK", scale = scale) ###本实验常用template
-    img_warped_for_model = cv2.warpAffine(img, tform_landmark, (int(size_model*scale), int(size_model*scale)))
-    # cv2.imwrite("img_model_scale.jpg", img_warped_for_model)
-    
-    landmarks_reshape = np.array(landmark).reshape(-1, 2)
-    landmarks_reshape = np.concatenate((landmarks_reshape, np.ones((5,1), dtype=int)),axis=1)
-    tlmks = np.dot(tform_landmark,landmarks_reshape.T).T
-    for j in range(5):
-        cv2.circle(img_warped_for_model, (int(tlmks[j][0]), int(tlmks[j][1])), 3, (0,255,0), -1)
-    cv2.imwrite("img_model_scale.jpg", img_warped_for_model)
-    # image_scale_center_crop = img_warped_for_model[64:320, 64:320]
-    # cv2.imwrite("img_model_scale_crop.jpg", image_scale_center_crop)

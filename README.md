@@ -7,9 +7,16 @@
 </div>
 
 ### Results
-> Our model perform well in mask, occlusion, inclusive, sex, age, big pose, expression 
+> Our model perform well in many face conditions.
 
 - Images
+    - <details><summary> 👨‍👩‍👧‍👦 Age </summary><p><div align="center">
+    
+    - <details><summary> 🥸 Occlusion </summary><p><div align="center">
+    
+    - <details><summary> 🔭 Large pose </summary><p><div align="center">
+    
+    - <details><summary> 🔆 Illumination </summary><p><div align="center">
 
 
 - Videos

@@ -25,7 +25,11 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     ```Shell
     pip install -r requirements.txt
     ```
-2. 
+### Usage
+- for a image
+```
+python lib/image_test.py --img_path your_image_path
+```
 
 ### Acknowledgement
 ```

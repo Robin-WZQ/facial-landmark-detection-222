@@ -17,7 +17,7 @@
     
     - <details><summary> 🥸 Occlusion </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/9f3adadc-bea0-40d4-acc8-f01bdc547d2a width="380" height="380"/>
+        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/b8032974-cca5-4226-8bdc-3e634165d607 width="380" height="380"/>
         </div>  
     
     - <details><summary> 🔆 Illumination </summary><p><div align="center">

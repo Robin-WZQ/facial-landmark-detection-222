@@ -19,15 +19,16 @@
     <div align=center>
     <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/9f3adadc-bea0-40d4-acc8-f01bdc547d2a width="380" height="380"/>
     </div>  
+    
+    - <details><summary> 🔆 Illumination </summary><p><div align="center">
+    <div align=center>
+    <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/61435623-83a9-40a1-9e03-f1b7eef39502 width="380" height="380"/>
+    </div>  
   
     - <details><summary> 🔭 Large pose </summary><p><div align="center">
     <div align=center>
-    <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/9f3adadc-bea0-40d4-acc8-f01bdc547d2a width="380" height="380"/>
+    <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/cccee92f-a671-45fd-ad88-d6ed1136df10 width="380" height="380"/>
     </div>  
-      
-    
-    - <details><summary> 🔆 Illumination </summary><p><div align="center">
-
 
 - Videos
 

@@ -7,6 +7,7 @@
 </div>
 
 ### Results
+> Our model perform well in mask, occlusion, inclusive, sex, age, big pose, expression 
 
 - Images
 

@@ -51,6 +51,7 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     ```
 ### Usage
 - for an image
+    > We highly recommend using an aligned photo.
     ```
     python lib/image_test.py --img_path your_image_path
     ```

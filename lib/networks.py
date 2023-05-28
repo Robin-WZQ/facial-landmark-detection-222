@@ -12,7 +12,7 @@ class Pip_mbnetv2(nn.Module):
         self.features = mbnet.features
         self.sigmoid = nn.Sigmoid()
 
-        self.channel = 80
+        self.channel = 112
 
         self.cls_layer = nn.Conv2d(self.channel, num_lms, kernel_size=1, stride=1, padding=0)
         self.x_layer = nn.Conv2d(self.channel, num_lms, kernel_size=1, stride=1, padding=0)

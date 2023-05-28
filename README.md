@@ -57,6 +57,7 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     ```
 
 - for a video
+    > We support a real time face aligning algorithm, which using 5 landmarks of the last clip.
     ```
     python lib/video_test.py --video_path your_video_path
     ```

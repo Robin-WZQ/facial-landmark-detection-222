@@ -114,7 +114,7 @@ def main():
     parser.add_argument("--img_path", default="./meanface.jpg",type=str)
     parser.add_argument("--checkpoint_path", default="./post_model.pth",type=str)
     parser.add_argument("--num_nb",default=20, type=str)
-    parser.add_argument("--width_mult",default=0.25, type=str)
+    parser.add_argument("--width_mult",default=0.35, type=str)
     parser.add_argument("--num_lms",default=222, type=str)
     parser.add_argument("--input_size",default=192, type=str)
     parser.add_argument("--net_stride",default=32, type=str)

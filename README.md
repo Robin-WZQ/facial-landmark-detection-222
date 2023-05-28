@@ -42,6 +42,9 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     python lib/video_test.py --video_path your_video_path
     ```
 
+### About the model
+> Here lists some details of our model.
+
 ### Acknowledgement
 ```
 @article{JLS21,

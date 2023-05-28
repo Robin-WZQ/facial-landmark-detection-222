@@ -11,6 +11,9 @@
 
 - Images
     - <details><summary> 👨‍👩‍👧‍👦 Age </summary><p><div align="center">
+    <div align=center>
+    <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/9f3adadc-bea0-40d4-acc8-f01bdc547d2a width="380" height="380"/>
+    </div>
     
     - <details><summary> 🥸 Occlusion </summary><p><div align="center">
     

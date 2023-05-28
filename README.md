@@ -26,9 +26,14 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     pip install -r requirements.txt
     ```
 ### Usage
-- for a image
+- for an image
 ```
 python lib/image_test.py --img_path your_image_path
+```
+
+- for a video
+```
+python lib/video_test.py --video_path your_video_path
 ```
 
 ### Acknowledgement

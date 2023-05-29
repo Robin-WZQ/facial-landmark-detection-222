@@ -36,10 +36,10 @@
         </div>  
 
 - Videos
-    
-    <div align=center>
-    <img src=pictures/video1.gif width="570" height="380"/>
-    </div>  
+     - <details><summary> 📽️ Video </summary><p><div align="center">
+        <div align=center>
+        <img src=pictures/video1.gif width="426" height="240"/>
+        </div>  
 
 ### Installation
 The code was tested with Anaconda, Python 3.7. After installing the Anaconda environment:

@@ -75,7 +75,7 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
 > Here lists some details of our model.
   
 <div align=center>
-<img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/906ba3f7-fcbb-4e96-80c0-c8c59f25dbab width="480" height="240"/>
+<img src=pictures/detail.png width="480" height="240"/>
 </div>  
     
    P.S. * is the original parameter of PIPNET.

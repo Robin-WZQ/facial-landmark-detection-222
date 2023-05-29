@@ -66,7 +66,7 @@ The code was tested with Anaconda, Python 3.7. After installing the Anaconda env
     ```
 
 - for a video
-    > We support a real-time face alignment algorithm that uses the key points of the previous frame to align the face of the current frame
+    > We support a real-time face alignment algorithm that uses the key points of the previous frame to align the face of the current frame.
     ```
     python lib/video_test.py --video_path your_video_path
     ```

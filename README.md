@@ -3,7 +3,7 @@
 
 ### Key points
 <div align=center>
-<img src=test_meanface.jpg width="380" height="460"/>
+<img src=pictures/test_meanface.jpg width="380" height="460"/>
 </div>
 
 ### Results
@@ -12,32 +12,34 @@
 - Images
     - <details><summary> 👨‍👩‍👧‍👦 Age </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/e583df4a-c24f-4a12-bb0d-438b455e8cbd width="380" height="380"/>
+        <img src=pictures/2.png width="380" height="380"/>
         </div>
     
     - <details><summary> 🥸 Occlusion </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/b8032974-cca5-4226-8bdc-3e634165d607 width="380" height="380"/>
+        <img src=pictures/1.png width="380" height="380"/>
         </div>  
     
     - <details><summary> 🔆 Illumination </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/61435623-83a9-40a1-9e03-f1b7eef39502 width="380" height="380"/>
+        <img src=pictures/3.png width="380" height="380"/>
         </div>  
   
     - <details><summary> 🔭 Large pose </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/1e77f049-798c-45b3-8d79-949416016f80 width="380" height="380"/>
+        <img src=pictures/4.png width="380" height="380"/>
         </div>  
     
     - <details><summary> 😃 Extreme expression </summary><p><div align="center">
         <div align=center>
-        <img src=https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/dce78eb0-09d6-4b2a-b458-3543c22c416f width="570" height="380"/>
+        <img src=pictures/6.png width="570" height="380"/>
         </div>  
 
 - Videos
     
-    ![video1](https://github.com/Robin-WZQ/facial-landmark-detection-222/assets/60317828/83eeb0aa-cb9d-4fdf-b8fd-6dd88eb1142b)
+    <div align=center>
+    <img src=pictures/video1.gif width="570" height="380"/>
+    </div>  
 
 ### Installation
 The code was tested with Anaconda, Python 3.7. After installing the Anaconda environment:

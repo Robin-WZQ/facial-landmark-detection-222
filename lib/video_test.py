@@ -202,7 +202,7 @@ if __name__ == "__main__":
                 det_ymax = det_ymin + det_height - 1
 
                 det_xmin -= int(det_width * (det_box_scale-1)/2)
-                det_ymin += int(det_height * (det_box_scale-1)/2)
+                det_ymin -= int(det_height * (det_box_scale-1)/2)
                 det_xmax += int(det_width * (det_box_scale-1)/2)
                 det_ymax += int(det_height * (det_box_scale-1)/2)
                 det_xmin = max(det_xmin, 0)
